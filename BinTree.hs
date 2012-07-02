@@ -12,3 +12,7 @@ reverse (Node x y) = Node (BinTree.reverse y) (BinTree.reverse x)
 depth :: BinTree a -> Nat
 depth (Leaf e)   = Zero
 depth (Node x y) = Succ (max (depth x) (depth y))
+
+leavs :: BinTree a -> [a]
+leavs (Leaf e) = [e]
+leavs (Node x y) = (++) (leavs x) (leavs y)
