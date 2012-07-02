@@ -17,7 +17,7 @@ instance Num Nat where
   fromInteger n  = Succ (fromInteger (n-1))
 
 
-beside :: Nat -> Nat -> Bool
-beside (Succ x) (Succ y) = beside x y
-beside Zero x            = x == 1
-beside x Zero            = x == 1
+beside2 :: Nat -> Nat -> Bool
+beside2 (Succ x) (Succ y) = beside2 x y
+beside2 Zero x            = beside2 x Zero
+beside2 x Zero            = x == 3
