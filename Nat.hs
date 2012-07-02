@@ -6,8 +6,9 @@ data Nat = Zero | Succ Nat
 
 instance Num Nat where
   (+) a Zero     = a
-  (+) a (Succ b) = Succ (a+b)
-  negate _       = error "negate is udefined for Nat"
+  (+) Zero a     = a
+  (+) (Succ a) (Succ b) = Succ( Succ (a+b))
+  negate _       = error "negate is undefined for Nat"
   (*) a Zero     = Zero
   (*) a (Succ b) = a + (a * b)
   abs x          = x
