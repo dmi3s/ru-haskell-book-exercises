@@ -15,3 +15,9 @@ instance Num Nat where
   signum _       = Succ Zero
   fromInteger 0  = Zero
   fromInteger n  = Succ (fromInteger (n-1))
+
+
+beside :: Nat -> Nat -> Bool
+beside (Succ x) (Succ y) = beside x y
+beside Zero x            = x == 1
+beside x Zero            = x == 1
