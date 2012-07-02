@@ -22,3 +22,9 @@ beside2 :: Nat -> Nat -> Bool
 beside2 (Succ x) (Succ y) = beside2 x y
 beside2 Zero x            = beside2 x Zero
 beside2 x Zero            = x == 3
+
+
+pow :: Nat -> Nat -> Nat
+pow Zero a = Zero
+pow a Zero = 1
+pow a (Succ b) = a * pow a b
