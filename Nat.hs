@@ -25,6 +25,6 @@ beside2 x Zero            = x == 3
 
 
 pow :: Nat -> Nat -> Nat
-pow Zero a = Zero
 pow a Zero = 1
+pow Zero a = Zero
 pow a (Succ b) = a * pow a b
